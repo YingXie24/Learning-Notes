@@ -13,15 +13,15 @@
 
 ### Data science
 * Output reaches external customers
-* Decision based (advanced statistical modelling) * complex solutions on what action should we take
+* Decision based (advanced statistical modelling): complex solutions on what action should we take
 * Feature*based (building data products)* shopping recommendations, advertisement targeting, netflix tv suggestions
-* Background: CompSci, Quantitative Field (Physics, Math, Statistics)* Graduate degree!
+* Background: CompSci, Quantitative Field (Physics, Math, Statistics). Graduate degree!
 * Skills: Programming (Python & R)/ Statistics
 * Roles: Data Scientist/ ML Engineer
 
 ### Data engineering/ data infrastructure/ data architecture
 * Collection, storage, processing and transfer of data that enables data analytics and data science
-* eg implementing infrastructure allowing real*time recommendations to display immediately after activity on the site
+* eg implementing infrastructure allowing real-time recommendations to display immediately after activity on the site
 * Background: CompSci/ Software Engineering
 * Skills: Programming/ Database system
 * Roles: Data warehousing, developing and maintaining distributed systems, and building data pipelines
@@ -32,8 +32,8 @@
 3.BI Software
 
 ## Data pipeline: how data moves from collection to analysis</h2>
-Data source > raw data > raw data database > ETL > Analytic database > Analysis
-External data source > raw data > API> ETL >^
+* Data source > raw data > raw data database > ETL > Analytic database > Analysis
+* External data source > raw data > API> ETL >^
 
 ### ETL
 1. Extract: Pull raw data out from a database
