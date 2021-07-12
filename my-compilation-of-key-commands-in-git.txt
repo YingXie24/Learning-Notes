@@ -1,0 +1,56 @@
+CREATE A NEW REPOSITORY ON THE COMMAND LINE
+echo "# reponame" >> README.md
+git init
+git add README.add
+git commit - m "first commit"
+git remote add origin https://github.com/YingXie24/reponame.git
+git push -u origin master
+
+PUSH AN EXISTING REPOSITORY FROM THE COMMAND LINE
+git remote add origin https://github.com/YingXie24/reponame.git
+git push -u origin master
+
+
+COMMAND LIST
+git init: creates our own new repository
+git clone: copies an existing repository
+git status: determines the status of a repository
+git log: displays all commits of a repository
+	git log --oneline: lists git log one commit per line
+	git log --stat: display the files that have been changed in the commit, as well as the number of lines that have been added or deleted
+	git log --patch: display the actual changes that have been made in the files
+	git log --w: ignores changes to whitespace
+	git log --oneline --graph --all: shows all branches in the repo
+git show SHA: shows only one commit, in the format of patch. Can be combined with other flags above. For example: git show SHA --stat
+git add: stages content
+git commit: commits changes to the repo
+	git commit --amend: alter the most recent commit. You can modify the commit message of the most recent commit, in the code editor, by running git commit --amend. Also, you can add forgotten files to commit. Just edit the file, save, stage, and run git commit --amend to update the most recent commit instead of creating a new one. 
+git diff: recall changes to files that have not been committed yet
+(.gitignore):  Create a file named “.gitignore” and list files that you do not want git track in the gitignore file. 
+git tag: displays all tags that are in the repo
+      git tag -a v1.0: adds the annotated tag “v1.0” to the most recent commit
+      git tag -a v1.0 SHA: adds annotated tag to a specific commit in the repo
+      git tag -d v1.0: deletes the tag “v1.0”
+git branch: displays all branches in the repo. An asterisk will appear next to the name of the active branch. 
+	git branch sidebar: creates a branch called “sidebar” on the current commit. 
+      git branch sidebar SHA: creates a branch called “sidebar” at SHA
+	git branch -d sidebar: deletes the branch “sidebar”. You cannot delete a branch that you’re currently on. Also, you cannot delete a branch that has unique commits. 
+	git branch -D sidebar: to force deletion of branch “sidebar”
+git checkout sidebar: switch from your current branch to another branch called “sidebar”
+	git checkout -b sidebar: create branch “sidebar” and switch to it, all in one command
+git merge sidebar: combines “sidebar” branch to the current working branch. The current working branch will create a merge commit and move forward. Where you are matters!!
+git revert SHA: reverses given commit. It creates a new commit to undo the changes made by the given commit. 
+git reset <reference-to-commit>: erases commits. The default for git reset is git reset --mixed. 
+	git reset --mixed HEAD^: take changes made in the commit before HEAD^ and move them to the working directory. The head pointer is now moved to the position HEAD^. 
+	git reset --soft HEAD^: take changes made in the commit before HEAD^ and move them to the staging index
+	git reset --hard HEAD^: take changes made in the commit before HEAD^ and erase them
+	* Typically, ancestry references are used to indicate previous commits. The ancestry references are:
+	* ^ – indicates the parent commit
+	* ~ – indicates the first parent commit
+	* Resetting is a very risky move as content is removed from the repo completely. Always create a backup at the master branch using command git branch backup. To get back, remove uncommited changes from the working directory and merge “backup” into “master”. Use the  commands git checkout -- index.html then  git merge backup.
+	* You can access the content for 30 days before it is completely erased. Use git reflog command.
+git push origin yourbranchname: push a branch to GitHub. "origin" is the shorthand for remote repo's URL
+git pull origin master: get the most recent changes on Github onto your local machine
+
+
+
