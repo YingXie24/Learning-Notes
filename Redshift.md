@@ -1,4 +1,4 @@
-#Amazon Redshift
+# Amazon Redshift
 
 ## Traditional data warehouse (on- premise)
 Bottom tier (collect and cleanse)
