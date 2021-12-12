@@ -1,6 +1,6 @@
-Data sources can be internal (company department) and external data.
+#Amazon Redshift
 
-# Traditional data warehouse (on- premise)
+## Traditional data warehouse (on- premise)
 Bottom tier (collect and cleanse)
 Middle tier (OLAP, convert)
 Top tier (front end client - query, analystics, data mining)
@@ -10,7 +10,7 @@ Top tier (front end client - query, analystics, data mining)
 - performance issues
 - spiralling costs (hardware, security, estate)
 
-# Amazon redshift: Cloud based warehouse
+## Amazon redshift: Cloud based warehouse
 parallel
 column-oriented
 data lake
@@ -23,7 +23,7 @@ compute nodes: execute the query plan
 node slices: compute nodes are divided into slices. Slices work in parallet
 client application works with leader node using SQL
 
-# Two types of nodes available: 
+## Two types of nodes available: 
 Dense storage nodes (DS): storage optimised
 Dense compute (DC): compute optimised
 When choosing need to consider
@@ -31,7 +31,7 @@ When choosing need to consider
 2. Complexity of queries
 3. Downstream systems
 
-# Why use Amazon Redshift
+## Why use Amazon Redshift
 1. Easy to set up, deploy and manage (just one click)
 2. Scales quickly (resize cluster size, increase number of compute nodes)
 3. Better and faster performance (columnar storage, parallel processing for high throughput)
