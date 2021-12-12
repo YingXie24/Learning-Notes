@@ -1,6 +1,6 @@
 Data sources can be internal (company department) and external data.
 
-Traditional data warehouse (on- premise)
+# Traditional data warehouse (on- premise)
 Bottom tier (collect and cleanse)
 Middle tier (OLAP, convert)
 Top tier (front end client - query, analystics, data mining)
@@ -10,7 +10,7 @@ Top tier (front end client - query, analystics, data mining)
 - performance issues
 - spiralling costs (hardware, security, estate)
 
-Amazon redshift: Cloud based warehouse
+# Amazon redshift: Cloud based warehouse
 parallel
 column-oriented
 data lake
