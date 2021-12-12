@@ -49,4 +49,45 @@ When choosing need to consider
 
 [link here]<https://docs.aws.amazon.com/redshift/latest/gsg/concepts-diagrams.html>
 
+# Amazon S3
+- S3 is for data storage (unlimited and flexible)
+- Redshift is for data analytics (structured data)
+- Redshift gives you fast querying capabiilites over structured data using familiar SQL-based clents and BI tools using standard ODBC/JDBC connections. 
+- The relationship between Redshift and S3 is that data can be pumped into warehouse from S3
+
+## Object and buckets in S3
+- Objects contains data, name and metadata
+- A bucket stores objects
+- When an object is stored in a bucket, it gets assigned an id
+
+## Storage class
+- User will specify the type of storage class for each object uploaded
+1. S3 Standard for frequent data access: Frequently (daily) accessed data. The default storage class. Used for big data analytics and applications
+2. S3 Standard for infrequent data access. Suitable for backups.
+3. Amazon Glacier: Used where data has to be archived and high performance is not required. Cheapest. 
+4. One zone IA: Used where data is infrequently accessed and stored in a single region
+5. Standard Reduced Redundancy storage: Where data is non critical and reproduced quickly 
+
+## S3 features
+### Lifecycle management
+Amazon S3 applies set of rules to a group of objects
+1. Transition actions: moves objects from one storage class to another storage class on a defined schedule, eg. Standard -> Infrequent access -> Glacier (to save cost)
+2. Expiration actions: removes objects when a specified date/ time period is reached
+
+### Bucket policy
+An IAM which allows and denies user permission to your S3 bucket
+
+### Data encryption
+Client-side encryption: data encryption at rest 
+Server-side encryption: data encryption in motion
+
+### Versioning
+Preserves, recovers and restores early versions of every object you store in the S3 bucket. Each version as a different version-id. You need to enable versioning!
+
+### Cross-region replication
+Copies every object in your buckets in different AWS regions
+
+### Transfer acceleration
+Transfers data very quickly from client (local pc) to bucket over large distances, eg Mumbai to Oregon
+
 
